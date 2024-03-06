@@ -38,15 +38,19 @@ class LoginCubit extends Cubit<LoginStates> {
           CacheHelper.setBool(CustomerHelper.AUTOMATIC_POIST_ACC,
               loginModel!.settings![0].automaticpostacc);
         }
+        if (loginModel!.settings![0].automaticpoststock != null) {
+          CacheHelper.setBool(CustomerHelper.AUTOMATIC_POIST_STOCK,
+              loginModel!.settings![0].automaticpoststock);
+        }
        if (loginModel!.settings![0].showpayinmobcash != null) {
          CacheHelper.setBool(CustomerHelper.SHOW_PAY_IN_MOB_CASH,
              loginModel!.settings![0].showpayinmobcash);
        }
 
-        CacheHelper.sharedPreferences.setString(CustomerHelper.COMPENYPATH,loginModel!.userproperty![0].compenypath!);
-         CacheHelper.sharedPreferences.setString(CustomerHelper.USER_NAME, loginModel!.userproperty![0].username!);
-         CacheHelper.sharedPreferences.setString(CustomerHelper.USER_ID, loginModel!.userproperty![0].userid!);
-         CacheHelper.sharedPreferences.setString(CustomerHelper.YEAR, loginModel!.userproperty![0].uyear!);
+        CacheHelper.sharedPreferences.setString(CustomerHelper.COMPENYPATH,loginModel!.userproperty![0].compenypath!.toString());
+         CacheHelper.sharedPreferences.setString(CustomerHelper.USER_NAME, loginModel!.userproperty![0].userName!.toString());
+         CacheHelper.sharedPreferences.setString(CustomerHelper.USER_ID, loginModel!.userproperty![0].userid!.toString());
+         CacheHelper.sharedPreferences.setString(CustomerHelper.YEAR, loginModel!.userproperty![0].uyear!.toString());
 
 
       }

@@ -18,7 +18,6 @@ class ApiConstants{
       "actionnumkey" : -1,
       "actionnumber" : 0
 
-
     };
   }
 

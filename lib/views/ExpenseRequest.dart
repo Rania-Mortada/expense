@@ -8,7 +8,7 @@ import 'package:expense/views/ExpenseRequest.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:expense/tim.dart';
+import 'package:expense/views/tim.dart';
 class ExpenseRequest extends StatefulWidget{
   @override
   State<ExpenseRequest> createState() => _ExpenseRequestState();
@@ -258,10 +258,13 @@ class _ExpenseRequestState extends State<ExpenseRequest> {
                   height: 50,
                   decoration: BoxDecoration(
 
+
                   borderRadius: BorderRadius.circular(15)
                   ),
                       child: Padding(
+
                         padding: const EdgeInsets.only(left: 30,right: 30),
+
                         child: ModalProgressHUD(inAsyncCall: isLoading,
                           child: BlocConsumer<ExpensesTypeCubit,ExpenState>(
                               listener:(context , state){},
@@ -375,7 +378,8 @@ class _ExpenseRequestState extends State<ExpenseRequest> {
                      ),
                      child: Padding(
                        padding: const EdgeInsets.only(left: 15,right: 15),
-                       child: TextFormField(keyboardType: TextInputType.phone,
+                       child: TextFormField(
+                         keyboardType: TextInputType.phone,
 
                          // onSaved: onSaved,
                          validator: (data){

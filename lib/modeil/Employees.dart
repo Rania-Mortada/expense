@@ -45,10 +45,10 @@ class Data {
   int? jobtype;
   Null? empstatus;
   Null? empstatusname;
-  int? basicsalary;
+  double? basicsalary;
   Null? housing;
   Null? allowncebsalary;
-  int? insursalary;
+  double? insursalary;
   String? empworkdate;
   int? paytypeid;
   String? paytypename;

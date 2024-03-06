@@ -10,16 +10,17 @@ class SimbleObservre implements BlocObserver {
 
   @override
   void onClose(BlocBase bloc) {
-    // TODO: implement onClose
+    debugPrint('bloc =$bloc');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // TODO: implement onCreate
+    debugPrint('bloc =$bloc');
   }
 
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+
     // TODO: implement onError
   }
 
@@ -32,5 +33,4 @@ class SimbleObservre implements BlocObserver {
   void onTransition(Bloc bloc, Transition transition) {
     // TODO: implement onTransition
   }
-  
 }

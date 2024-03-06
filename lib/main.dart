@@ -2,12 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:expense/logincs/CubitLogin.dart';
 import 'package:expense/cuibit/cuibitexp.dart';
 import 'package:expense/logincs/Login.dart';
-import 'package:flutter/material.dart';
 import 'package:expense/views/ExpenseRequest.dart';
+import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:expense/Samble_observre.dart';
+import 'package:expense/views/Samble_observre.dart';
 import 'package:expense/Api/api.dart';
-import 'TextFieldd.dart';
+
 
 
 
@@ -26,8 +27,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context)=> LoginCubit()),
-        BlocProvider(create: (context)=> ExpensesTypeCubit()),
-        BlocProvider(create: (context)=> EmployessCubit()),
+        BlocProvider(create: (context)=> ExpensesTypeCubit()..ExpenseRequest(expname: "")),
+        BlocProvider(create: (context)=> EmployessCubit()..ExpenseRequest(expname: "")),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
